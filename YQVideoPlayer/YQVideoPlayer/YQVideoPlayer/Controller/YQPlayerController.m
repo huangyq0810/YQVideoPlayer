@@ -69,6 +69,7 @@ static const NSString *PlayerItemStatusContext;
     self.transport.delegate = self;
 }
 
+// 监听状态改变
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
     if (context == &PlayerItemStatusContext) {
         dispatch_async(dispatch_get_main_queue(), ^{
@@ -136,49 +137,55 @@ static const NSString *PlayerItemStatusContext;
 
 #pragma mark - Time Observers
 
+// 定期监听 (还有一种是边界时间监听)
 - (void)addPlayerItemTimeObserver {
     
-    // Create 0.5 second refresh interval - REFRESH_INTERVAL == 0.5
-    CMTime interval =
-    CMTimeMakeWithSeconds(REFRESH_INTERVAL, NSEC_PER_SEC);              // 1
+    // 设置定期时间间隔为0.5秒
+    CMTime interval = CMTimeMakeWithSeconds(REFRESH_INTERVAL, NSEC_PER_SEC);
     
-    // Main dispatch queue
-    dispatch_queue_t queue = dispatch_get_main_queue();                     // 2
+    // 定义发送回调通知的调度队列，大多数情况下，由于我们所要更新的用户界面处于主线程，所以一般使用主队列
+    dispatch_queue_t queue = dispatch_get_main_queue();
     
-    // Create callback block for time observer
-    __weak YQPlayerController *weakSelf = self;                             // 3
+    // 定义一个回调块，在前面定义的时间周期内会调用该代码块
+    __weak YQPlayerController *weakSelf = self;
     void (^callback)(CMTime time) = ^(CMTime time) {
-        NSTimeInterval currentTime = CMTimeGetSeconds(time);
+        NSTimeInterval currentTime =CMTimeGetSeconds(time);
         NSTimeInterval duration = CMTimeGetSeconds(weakSelf.playerItem.duration);
-        [weakSelf.transport setCurrentTime:currentTime duration:duration];  // 4
+        [weakSelf.transport setCurrentTime:currentTime duration:duration];
     };
     
-    // Add observer and store pointer for future use
-    self.timeObserver =                                                     // 5
-    [self.player addPeriodicTimeObserverForInterval:interval
-                                              queue:queue
-                                         usingBlock:callback];
+    // 调用定期监听的方法，返回的id类型指针会用于移除监听器
+    self.timeObserver = [self.player addPeriodicTimeObserverForInterval:interval queue:queue usingBlock:callback];
 }
 
+// 条目结束监听
 - (void)addItemEndObserverForPlayerItem {
     
     NSString *name = AVPlayerItemDidPlayToEndTimeNotification;
     
     NSOperationQueue *queue = [NSOperationQueue mainQueue];
     
-    __weak YQPlayerController *weakSelf = self;                             // 1
-    void (^callback)(NSNotification *note) = ^(NSNotification *notification) {
-        [weakSelf.player seekToTime:kCMTimeZero                             // 2
-                  completionHandler:^(BOOL finished) {
-                      [weakSelf.transport playbackComplete];                          // 3
-                  }];
+    __weak YQPlayerController *weakSelf = self;
+    void (^callback)(NSNotification *note) = ^(NSNotification *notificaiton) {
+        // 播放完毕，通过seekToTime方法重新定位播放头光标回到0位置
+        [weakSelf.player seekToTime:kCMTimeZero completionHandler:^(BOOL finished) {
+            // 通知播放栏播放已经完成了，这样就可以重新设置展示时间和进度条
+            [weakSelf.transport playbackComplete];
+        }];
     };
     
-    self.itemEndObserver =                                                  // 4
-    [[NSNotificationCenter defaultCenter] addObserverForName:name
-                                                      object:self.playerItem
-                                                       queue:queue
-                                                  usingBlock:callback];
+    // 添加监听
+    self.itemEndObserver = [[NSNotificationCenter defaultCenter] addObserverForName:name object:self.playerItem queue:queue usingBlock:callback];
+
+}
+
+// 当控制器被释放时移除作为监听器的itemEndObserver
+- (void)dealloc {
+    if (self.itemEndObserver) {
+        NSString *name = AVPlayerItemDidPlayToEndTimeNotification;
+        [[NSNotificationCenter defaultCenter] removeObserver:self.itemEndObserver name:name object:self.playerItem];
+        self.itemEndObserver = nil;
+    }
 }
 
 #pragma mark - YQTransportDelegate
