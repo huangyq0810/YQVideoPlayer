@@ -70,8 +70,13 @@
 - (void)clickPlayButton:(UIButton *)sender {
     sender.selected = !sender.selected;
     if (self.delegate) {
-        SEL callback = sender.selected ? @selector(play) : @selector(pause);
-        [self.delegate performSelector:callback];
+//        SEL callback = sender.selected ? @selector(play) : @selector(pause);
+//        [self.delegate performSelector:callback];
+        if (sender.selected) {
+            [self.delegate performSelector:@selector(play)];
+        } else {
+            [self.delegate performSelector:@selector(pause)];
+        }
     }
     self.togglePlaybackButton.selected = sender.selected;
     if (sender.selected) {
@@ -149,8 +154,13 @@
 - (IBAction)togglePlayback:(UIButton *)sender {
     sender.selected = !sender.selected;
     if (self.delegate) {
-        SEL callback = sender.selected ? @selector(play) : @selector(pause);
-        [self.delegate performSelector:callback];
+//        SEL callback = sender.selected ? @selector(play) : @selector(pause);
+//        [self.delegate performSelector:callback];
+        if (sender.selected) {
+            [self.delegate performSelector:@selector(play)];
+        } else {
+            [self.delegate performSelector:@selector(pause)];
+        }
     }
     self.playButton.selected = sender.selected;
     
