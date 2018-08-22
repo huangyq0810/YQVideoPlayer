@@ -190,17 +190,31 @@ static const NSString *PlayerItemStatusContext;
 
 #pragma mark - YQTransportDelegate
 
-- (void)jumpedToTime:(NSTimeInterval)time {
-    
+
+#pragma mark - 1.控制
+
+- (void)play {
+    [self.player play];
 }
 
 - (void)pause {
-    
+    // 为了条理清晰，仍然获取 lastPlaybackRate
+    self.lastPlaybackRate = self.player.rate;
+    [self.player pause];
 }
 
-- (void)play {
-    
+- (void)stop {
+    [self.player setRate:0.0f];
+    //更新进度条圆点的位置
+    [self.transport playbackComplete];
 }
+
+// 跳转到time在时间轴上对应的位置
+- (void)jumpedToTime:(NSTimeInterval)time {
+    [self.player seekToTime:CMTimeMakeWithSeconds(time, NSEC_PER_SEC)];
+}
+
+#pragma mark - 2.交互
 
 - (void)scrubbedToTime:(NSTimeInterval)time {
     
@@ -214,9 +228,7 @@ static const NSString *PlayerItemStatusContext;
     
 }
 
-- (void)stop {
-    
-}
+
 
 
 #pragma mark - 1
