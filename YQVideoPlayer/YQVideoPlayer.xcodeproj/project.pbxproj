@@ -18,6 +18,8 @@
 		844F66E8212D369000A52322 /* YQPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 844F66E7212D369000A52322 /* YQPlayerView.m */; };
 		844F66EF212D3A9700A52322 /* YQOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 844F66EE212D3A9700A52322 /* YQOverlayView.m */; };
 		844F66F1212D3D0B00A52322 /* YQverlayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 844F66F0212D3D0B00A52322 /* YQverlayView.xib */; };
+		844F6700212D41CA00A52322 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 844F66FF212D41CA00A52322 /* UIView+Extension.m */; };
+		844F6706212D433600A52322 /* NSTimer+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 844F6705212D433600A52322 /* NSTimer+Extension.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +62,10 @@
 		844F66ED212D3A9700A52322 /* YQOverlayView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YQOverlayView.h; sourceTree = "<group>"; };
 		844F66EE212D3A9700A52322 /* YQOverlayView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YQOverlayView.m; sourceTree = "<group>"; };
 		844F66F0212D3D0B00A52322 /* YQverlayView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YQverlayView.xib; sourceTree = "<group>"; };
+		844F66FE212D41CA00A52322 /* UIView+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
+		844F66FF212D41CA00A52322 /* UIView+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
+		844F6704212D433600A52322 /* NSTimer+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSTimer+Extension.h"; sourceTree = "<group>"; };
+		844F6705212D433600A52322 /* NSTimer+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+Extension.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +154,7 @@
 				844F66EA212D376000A52322 /* Controller */,
 				844F66EB212D376900A52322 /* Model */,
 				844F66E9212D374F00A52322 /* View */,
+				844F66FD212D419E00A52322 /* Extension */,
 			);
 			path = YQVideoPlayer;
 			sourceTree = "<group>";
@@ -177,6 +184,17 @@
 				844F66EC212D37A800A52322 /* YQTransport.h */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		844F66FD212D419E00A52322 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				844F66FE212D41CA00A52322 /* UIView+Extension.h */,
+				844F66FF212D41CA00A52322 /* UIView+Extension.m */,
+				844F6704212D433600A52322 /* NSTimer+Extension.h */,
+				844F6705212D433600A52322 /* NSTimer+Extension.m */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -313,6 +331,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				844F6700212D41CA00A52322 /* UIView+Extension.m in Sources */,
+				844F6706212D433600A52322 /* NSTimer+Extension.m in Sources */,
 				844F66B8212D151100A52322 /* ViewController.m in Sources */,
 				844F66C3212D151100A52322 /* main.m in Sources */,
 				844F66EF212D3A9700A52322 /* YQOverlayView.m in Sources */,
