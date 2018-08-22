@@ -15,6 +15,9 @@
 		844F66C3212D151100A52322 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 844F66C2212D151100A52322 /* main.m */; };
 		844F66CD212D151100A52322 /* YQVideoPlayerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 844F66CC212D151100A52322 /* YQVideoPlayerTests.m */; };
 		844F66D8212D151100A52322 /* YQVideoPlayerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 844F66D7212D151100A52322 /* YQVideoPlayerUITests.m */; };
+		844F66E8212D369000A52322 /* YQPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 844F66E7212D369000A52322 /* YQPlayerView.m */; };
+		844F66EF212D3A9700A52322 /* YQOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 844F66EE212D3A9700A52322 /* YQOverlayView.m */; };
+		844F66F1212D3D0B00A52322 /* YQverlayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 844F66F0212D3D0B00A52322 /* YQverlayView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,12 @@
 		844F66D3212D151100A52322 /* YQVideoPlayerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YQVideoPlayerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		844F66D7212D151100A52322 /* YQVideoPlayerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YQVideoPlayerUITests.m; sourceTree = "<group>"; };
 		844F66D9212D151100A52322 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		844F66E6212D369000A52322 /* YQPlayerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YQPlayerView.h; sourceTree = "<group>"; };
+		844F66E7212D369000A52322 /* YQPlayerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YQPlayerView.m; sourceTree = "<group>"; };
+		844F66EC212D37A800A52322 /* YQTransport.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YQTransport.h; sourceTree = "<group>"; };
+		844F66ED212D3A9700A52322 /* YQOverlayView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YQOverlayView.h; sourceTree = "<group>"; };
+		844F66EE212D3A9700A52322 /* YQOverlayView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YQOverlayView.m; sourceTree = "<group>"; };
+		844F66F0212D3D0B00A52322 /* YQverlayView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YQverlayView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +110,7 @@
 		844F66B2212D151100A52322 /* YQVideoPlayer */ = {
 			isa = PBXGroup;
 			children = (
+				844F66E5212D15F700A52322 /* YQVideoPlayer */,
 				844F66B3212D151100A52322 /* AppDelegate.h */,
 				844F66B4212D151100A52322 /* AppDelegate.m */,
 				844F66B6212D151100A52322 /* ViewController.h */,
@@ -130,6 +140,43 @@
 				844F66D9212D151100A52322 /* Info.plist */,
 			);
 			path = YQVideoPlayerUITests;
+			sourceTree = "<group>";
+		};
+		844F66E5212D15F700A52322 /* YQVideoPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				844F66EA212D376000A52322 /* Controller */,
+				844F66EB212D376900A52322 /* Model */,
+				844F66E9212D374F00A52322 /* View */,
+			);
+			path = YQVideoPlayer;
+			sourceTree = "<group>";
+		};
+		844F66E9212D374F00A52322 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				844F66E6212D369000A52322 /* YQPlayerView.h */,
+				844F66E7212D369000A52322 /* YQPlayerView.m */,
+				844F66F0212D3D0B00A52322 /* YQverlayView.xib */,
+				844F66ED212D3A9700A52322 /* YQOverlayView.h */,
+				844F66EE212D3A9700A52322 /* YQOverlayView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		844F66EA212D376000A52322 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		844F66EB212D376900A52322 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				844F66EC212D37A800A52322 /* YQTransport.h */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -241,6 +288,7 @@
 				844F66C0212D151100A52322 /* LaunchScreen.storyboard in Resources */,
 				844F66BD212D151100A52322 /* Assets.xcassets in Resources */,
 				844F66BB212D151100A52322 /* Main.storyboard in Resources */,
+				844F66F1212D3D0B00A52322 /* YQverlayView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,7 +315,9 @@
 			files = (
 				844F66B8212D151100A52322 /* ViewController.m in Sources */,
 				844F66C3212D151100A52322 /* main.m in Sources */,
+				844F66EF212D3A9700A52322 /* YQOverlayView.m in Sources */,
 				844F66B5212D151100A52322 /* AppDelegate.m in Sources */,
+				844F66E8212D369000A52322 /* YQPlayerView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
