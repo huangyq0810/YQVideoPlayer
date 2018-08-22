@@ -1,0 +1,551 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		844F66B5212D151100A52322 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 844F66B4212D151100A52322 /* AppDelegate.m */; };
+		844F66B8212D151100A52322 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 844F66B7212D151100A52322 /* ViewController.m */; };
+		844F66BB212D151100A52322 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 844F66B9212D151100A52322 /* Main.storyboard */; };
+		844F66BD212D151100A52322 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 844F66BC212D151100A52322 /* Assets.xcassets */; };
+		844F66C0212D151100A52322 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 844F66BE212D151100A52322 /* LaunchScreen.storyboard */; };
+		844F66C3212D151100A52322 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 844F66C2212D151100A52322 /* main.m */; };
+		844F66CD212D151100A52322 /* YQVideoPlayerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 844F66CC212D151100A52322 /* YQVideoPlayerTests.m */; };
+		844F66D8212D151100A52322 /* YQVideoPlayerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 844F66D7212D151100A52322 /* YQVideoPlayerUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		844F66C9212D151100A52322 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 844F66A8212D151100A52322 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 844F66AF212D151100A52322;
+			remoteInfo = YQVideoPlayer;
+		};
+		844F66D4212D151100A52322 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 844F66A8212D151100A52322 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 844F66AF212D151100A52322;
+			remoteInfo = YQVideoPlayer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		844F66B0212D151100A52322 /* YQVideoPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YQVideoPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		844F66B3212D151100A52322 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		844F66B4212D151100A52322 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		844F66B6212D151100A52322 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		844F66B7212D151100A52322 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		844F66BA212D151100A52322 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		844F66BC212D151100A52322 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		844F66BF212D151100A52322 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		844F66C1212D151100A52322 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		844F66C2212D151100A52322 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		844F66C8212D151100A52322 /* YQVideoPlayerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YQVideoPlayerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		844F66CC212D151100A52322 /* YQVideoPlayerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YQVideoPlayerTests.m; sourceTree = "<group>"; };
+		844F66CE212D151100A52322 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		844F66D3212D151100A52322 /* YQVideoPlayerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YQVideoPlayerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		844F66D7212D151100A52322 /* YQVideoPlayerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YQVideoPlayerUITests.m; sourceTree = "<group>"; };
+		844F66D9212D151100A52322 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		844F66AD212D151100A52322 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		844F66C5212D151100A52322 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		844F66D0212D151100A52322 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		844F66A7212D151100A52322 = {
+			isa = PBXGroup;
+			children = (
+				844F66B2212D151100A52322 /* YQVideoPlayer */,
+				844F66CB212D151100A52322 /* YQVideoPlayerTests */,
+				844F66D6212D151100A52322 /* YQVideoPlayerUITests */,
+				844F66B1212D151100A52322 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		844F66B1212D151100A52322 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				844F66B0212D151100A52322 /* YQVideoPlayer.app */,
+				844F66C8212D151100A52322 /* YQVideoPlayerTests.xctest */,
+				844F66D3212D151100A52322 /* YQVideoPlayerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		844F66B2212D151100A52322 /* YQVideoPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				844F66B3212D151100A52322 /* AppDelegate.h */,
+				844F66B4212D151100A52322 /* AppDelegate.m */,
+				844F66B6212D151100A52322 /* ViewController.h */,
+				844F66B7212D151100A52322 /* ViewController.m */,
+				844F66B9212D151100A52322 /* Main.storyboard */,
+				844F66BC212D151100A52322 /* Assets.xcassets */,
+				844F66BE212D151100A52322 /* LaunchScreen.storyboard */,
+				844F66C1212D151100A52322 /* Info.plist */,
+				844F66C2212D151100A52322 /* main.m */,
+			);
+			path = YQVideoPlayer;
+			sourceTree = "<group>";
+		};
+		844F66CB212D151100A52322 /* YQVideoPlayerTests */ = {
+			isa = PBXGroup;
+			children = (
+				844F66CC212D151100A52322 /* YQVideoPlayerTests.m */,
+				844F66CE212D151100A52322 /* Info.plist */,
+			);
+			path = YQVideoPlayerTests;
+			sourceTree = "<group>";
+		};
+		844F66D6212D151100A52322 /* YQVideoPlayerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				844F66D7212D151100A52322 /* YQVideoPlayerUITests.m */,
+				844F66D9212D151100A52322 /* Info.plist */,
+			);
+			path = YQVideoPlayerUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		844F66AF212D151100A52322 /* YQVideoPlayer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 844F66DC212D151100A52322 /* Build configuration list for PBXNativeTarget "YQVideoPlayer" */;
+			buildPhases = (
+				844F66AC212D151100A52322 /* Sources */,
+				844F66AD212D151100A52322 /* Frameworks */,
+				844F66AE212D151100A52322 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = YQVideoPlayer;
+			productName = YQVideoPlayer;
+			productReference = 844F66B0212D151100A52322 /* YQVideoPlayer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		844F66C7212D151100A52322 /* YQVideoPlayerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 844F66DF212D151100A52322 /* Build configuration list for PBXNativeTarget "YQVideoPlayerTests" */;
+			buildPhases = (
+				844F66C4212D151100A52322 /* Sources */,
+				844F66C5212D151100A52322 /* Frameworks */,
+				844F66C6212D151100A52322 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				844F66CA212D151100A52322 /* PBXTargetDependency */,
+			);
+			name = YQVideoPlayerTests;
+			productName = YQVideoPlayerTests;
+			productReference = 844F66C8212D151100A52322 /* YQVideoPlayerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		844F66D2212D151100A52322 /* YQVideoPlayerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 844F66E2212D151100A52322 /* Build configuration list for PBXNativeTarget "YQVideoPlayerUITests" */;
+			buildPhases = (
+				844F66CF212D151100A52322 /* Sources */,
+				844F66D0212D151100A52322 /* Frameworks */,
+				844F66D1212D151100A52322 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				844F66D5212D151100A52322 /* PBXTargetDependency */,
+			);
+			name = YQVideoPlayerUITests;
+			productName = YQVideoPlayerUITests;
+			productReference = 844F66D3212D151100A52322 /* YQVideoPlayerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		844F66A8212D151100A52322 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = admin;
+				TargetAttributes = {
+					844F66AF212D151100A52322 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					844F66C7212D151100A52322 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 844F66AF212D151100A52322;
+					};
+					844F66D2212D151100A52322 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 844F66AF212D151100A52322;
+					};
+				};
+			};
+			buildConfigurationList = 844F66AB212D151100A52322 /* Build configuration list for PBXProject "YQVideoPlayer" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 844F66A7212D151100A52322;
+			productRefGroup = 844F66B1212D151100A52322 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				844F66AF212D151100A52322 /* YQVideoPlayer */,
+				844F66C7212D151100A52322 /* YQVideoPlayerTests */,
+				844F66D2212D151100A52322 /* YQVideoPlayerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		844F66AE212D151100A52322 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				844F66C0212D151100A52322 /* LaunchScreen.storyboard in Resources */,
+				844F66BD212D151100A52322 /* Assets.xcassets in Resources */,
+				844F66BB212D151100A52322 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		844F66C6212D151100A52322 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		844F66D1212D151100A52322 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		844F66AC212D151100A52322 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				844F66B8212D151100A52322 /* ViewController.m in Sources */,
+				844F66C3212D151100A52322 /* main.m in Sources */,
+				844F66B5212D151100A52322 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		844F66C4212D151100A52322 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				844F66CD212D151100A52322 /* YQVideoPlayerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		844F66CF212D151100A52322 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				844F66D8212D151100A52322 /* YQVideoPlayerUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		844F66CA212D151100A52322 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 844F66AF212D151100A52322 /* YQVideoPlayer */;
+			targetProxy = 844F66C9212D151100A52322 /* PBXContainerItemProxy */;
+		};
+		844F66D5212D151100A52322 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 844F66AF212D151100A52322 /* YQVideoPlayer */;
+			targetProxy = 844F66D4212D151100A52322 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		844F66B9212D151100A52322 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				844F66BA212D151100A52322 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		844F66BE212D151100A52322 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				844F66BF212D151100A52322 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		844F66DA212D151100A52322 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		844F66DB212D151100A52322 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		844F66DD212D151100A52322 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = YQVideoPlayer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hyq.YQVideoPlayer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		844F66DE212D151100A52322 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = YQVideoPlayer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hyq.YQVideoPlayer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		844F66E0212D151100A52322 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = YQVideoPlayerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hyq.YQVideoPlayerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YQVideoPlayer.app/YQVideoPlayer";
+			};
+			name = Debug;
+		};
+		844F66E1212D151100A52322 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = YQVideoPlayerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hyq.YQVideoPlayerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YQVideoPlayer.app/YQVideoPlayer";
+			};
+			name = Release;
+		};
+		844F66E3212D151100A52322 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = YQVideoPlayerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hyq.YQVideoPlayerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = YQVideoPlayer;
+			};
+			name = Debug;
+		};
+		844F66E4212D151100A52322 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = YQVideoPlayerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hyq.YQVideoPlayerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = YQVideoPlayer;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		844F66AB212D151100A52322 /* Build configuration list for PBXProject "YQVideoPlayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				844F66DA212D151100A52322 /* Debug */,
+				844F66DB212D151100A52322 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		844F66DC212D151100A52322 /* Build configuration list for PBXNativeTarget "YQVideoPlayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				844F66DD212D151100A52322 /* Debug */,
+				844F66DE212D151100A52322 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		844F66DF212D151100A52322 /* Build configuration list for PBXNativeTarget "YQVideoPlayerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				844F66E0212D151100A52322 /* Debug */,
+				844F66E1212D151100A52322 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		844F66E2212D151100A52322 /* Build configuration list for PBXNativeTarget "YQVideoPlayerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				844F66E3212D151100A52322 /* Debug */,
+				844F66E4212D151100A52322 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 844F66A8212D151100A52322 /* Project object */;
+}
