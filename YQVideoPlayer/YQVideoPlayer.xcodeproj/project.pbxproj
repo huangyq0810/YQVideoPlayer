@@ -18,7 +18,6 @@
 		844F66E8212D369000A52322 /* YQPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 844F66E7212D369000A52322 /* YQPlayerView.m */; };
 		844F66EF212D3A9700A52322 /* YQOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 844F66EE212D3A9700A52322 /* YQOverlayView.m */; };
 		844F66F1212D3D0B00A52322 /* YQOverlayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 844F66F0212D3D0B00A52322 /* YQOverlayView.xib */; };
-		844F6700212D41CA00A52322 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 844F66FF212D41CA00A52322 /* UIView+Extension.m */; };
 		844F6706212D433600A52322 /* NSTimer+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 844F6705212D433600A52322 /* NSTimer+Extension.m */; };
 		844F6709212D4BB400A52322 /* YQPlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 844F6708212D4BB400A52322 /* YQPlayerController.m */; };
 		844F670C212D516E00A52322 /* AVAsset+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 844F670B212D516E00A52322 /* AVAsset+Extension.m */; };
@@ -65,8 +64,6 @@
 		844F66ED212D3A9700A52322 /* YQOverlayView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YQOverlayView.h; sourceTree = "<group>"; };
 		844F66EE212D3A9700A52322 /* YQOverlayView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YQOverlayView.m; sourceTree = "<group>"; };
 		844F66F0212D3D0B00A52322 /* YQOverlayView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YQOverlayView.xib; sourceTree = "<group>"; };
-		844F66FE212D41CA00A52322 /* UIView+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
-		844F66FF212D41CA00A52322 /* UIView+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
 		844F6704212D433600A52322 /* NSTimer+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSTimer+Extension.h"; sourceTree = "<group>"; };
 		844F6705212D433600A52322 /* NSTimer+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+Extension.m"; sourceTree = "<group>"; };
 		844F6707212D4BB400A52322 /* YQPlayerController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YQPlayerController.h; sourceTree = "<group>"; };
@@ -200,8 +197,6 @@
 		844F66FD212D419E00A52322 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				844F66FE212D41CA00A52322 /* UIView+Extension.h */,
-				844F66FF212D41CA00A52322 /* UIView+Extension.m */,
 				844F6704212D433600A52322 /* NSTimer+Extension.h */,
 				844F6705212D433600A52322 /* NSTimer+Extension.m */,
 				844F670A212D516E00A52322 /* AVAsset+Extension.h */,
@@ -345,7 +340,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				844F6700212D41CA00A52322 /* UIView+Extension.m in Sources */,
 				844F6706212D433600A52322 /* NSTimer+Extension.m in Sources */,
 				844F6709212D4BB400A52322 /* YQPlayerController.m in Sources */,
 				844F66B8212D151100A52322 /* ViewController.m in Sources */,

@@ -23,7 +23,6 @@
 
 @property (weak, nonatomic) id <YQTransportDelegate> delegate;
 
-- (IBAction)toggleControls:(id)sender;
 - (IBAction)togglePlayback:(UIButton *)sender;
 - (IBAction)closeWindow:(id)sender;
 - (void)setCurrentTime:(NSTimeInterval)time;

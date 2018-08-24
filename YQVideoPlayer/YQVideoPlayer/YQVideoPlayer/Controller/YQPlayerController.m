@@ -88,7 +88,7 @@ static const NSString *PlayerItemStatusContext;
                 [self.transport setCurrentTime:CMTimeGetSeconds(kCMTimeZero) duration:CMTimeGetSeconds(duration)];
                 
                 // Set the video title.
-                [self.transport setTitle:self.asset.title];
+//                [self.transport setTitle:self.asset.title];
                 
                 [self.player play];
                 

@@ -7,7 +7,6 @@
 //
 
 #import "YQOverlayView.h"
-#import "UIView+Extension.h"
 #import "NSTimer+Extension.h"
 #import <MediaPlayer/MediaPlayer.h>
 
@@ -20,12 +19,10 @@
 @property (nonatomic, assign) CGFloat infoViewOffset;
 @property (strong, nonatomic) NSTimer *timer;
 @property (assign) BOOL scrubbing;
-@property (strong, nonatomic) NSArray *subtitles;
-@property (copy, nonatomic) NSString *selectedSubtitle;
 @property (assign) CGFloat lastPlaybackRate;
 @property (strong, nonatomic) MPVolumeView *volumeView;
 
-// play_button
+//
 @property (strong, nonatomic) UIButton *playButton;
 
 @end
@@ -60,8 +57,6 @@
     [self.playButton setImage:[UIImage imageNamed:@"pause_button"] forState:UIControlStateSelected];
     
     [self addSubview:self.playButton];
-    //    self.backgroundColor = [UIColor redColor];
-    //    self.playButton.selected = self.togglePlaybackButton.selected;
     [self.playButton addTarget:self action:@selector(clickPlayButton:) forControlEvents:UIControlEventTouchUpInside];
     
     self.playButton.hidden = YES;
@@ -69,6 +64,7 @@
 
 - (void)clickPlayButton:(UIButton *)sender {
     sender.selected = !sender.selected;
+    sender.hidden = sender.selected;
     if (self.delegate) {
 //        SEL callback = sender.selected ? @selector(play) : @selector(pause);
 //        [self.delegate performSelector:callback];
@@ -79,11 +75,6 @@
         }
     }
     self.togglePlaybackButton.selected = sender.selected;
-    if (sender.selected) {
-        sender.hidden = NO;
-    } else {
-        sender.hidden = YES;
-    }
 }
 
 - (void)layoutSubviews {
@@ -127,32 +118,9 @@
     return label;
 }
 
-- (IBAction)toggleControls:(id)sender {
-    [UIView animateWithDuration:0.35 animations:^{
-        if (!self.controlsHidden) {
-            if (!self.filmstripHidden) {
-                [UIView animateWithDuration:0.35 animations:^{
-                    self.filmstripHidden = YES;
-                } completion:^(BOOL complete) {
-                    [UIView animateWithDuration:0.35 animations:^{
-                        self.navigationBar.frameY -= self.navigationBar.frameHeight;
-                        self.toolbar.frameY += self.toolbar.frameHeight;
-                    }];
-                }];
-            } else {
-                self.navigationBar.frameY -= self.navigationBar.frameHeight;
-                self.toolbar.frameY += self.toolbar.frameHeight;
-            }
-        } else {
-            self.navigationBar.frameY += self.navigationBar.frameHeight;
-            self.toolbar.frameY -= self.toolbar.frameHeight;
-        }
-        self.controlsHidden = !self.controlsHidden;
-    }];
-}
-
 - (IBAction)togglePlayback:(UIButton *)sender {
     sender.selected = !sender.selected;
+    self.playButton.hidden = sender.selected;
     if (self.delegate) {
 //        SEL callback = sender.selected ? @selector(play) : @selector(pause);
 //        [self.delegate performSelector:callback];
@@ -163,12 +131,6 @@
         }
     }
     self.playButton.selected = sender.selected;
-    
-    if (self.playButton.selected) {
-        self.playButton.hidden = NO;
-    } else {
-        self.playButton.hidden = YES;
-    }
 }
 
 - (IBAction)closeWindow:(id)sender {
@@ -185,7 +147,7 @@
     
     CGRect rect = self.infoView.frame;
     rect.origin.x = (thumbRect.origin.x) - self.infoViewOffset + 16;
-    rect.origin.y = self.boundsHeight - 80;
+    rect.origin.y = self.bounds.size.height - 80;
     self.infoView.frame = rect;
     
     self.currentTimeLabel.text = @"-- : --";
@@ -235,16 +197,15 @@
     [self.timer invalidate];
     if (!self.scrubbing) {
         self.timer = [NSTimer scheduledTimerWithTimeInterval:5.0 firing:^{
-            if (self.timer.isValid && !self.controlsHidden) {
-                [self toggleControls:nil];
-            }
+//            if (self.timer.isValid && !self.controlsHidden) {
+//                [self toggleControls:nil];
+//            }
         }];
     }
 }
 
-- (void)setTitle:(NSString *)title {
-    self.navigationBar.topItem.title = title ? title : @"Video Player";
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    NSLog(@"-----touch-----");
 }
-
 
 @end

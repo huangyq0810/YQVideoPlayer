@@ -27,7 +27,7 @@
 
 @property (nonatomic, weak) id <YQTransportDelegate> delegate;
 
-- (void)setTitle:(NSString *)title;
+//- (void)setTitle:(NSString *)title;
 - (void)setCurrentTime:(NSTimeInterval)time duration:(NSTimeInterval)duration;
 - (void)setScrubbingTime:(NSTimeInterval)time;
 - (void)playbackComplete;

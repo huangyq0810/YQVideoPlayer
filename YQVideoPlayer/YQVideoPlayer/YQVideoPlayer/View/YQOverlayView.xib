@@ -121,15 +121,8 @@
                 <outlet property="scrubbingTimeLabel" destination="kmf-UC-16s" id="MtE-Vf-K4D"/>
                 <outlet property="togglePlaybackButton" destination="7Yf-eL-6Ej" id="GGN-Vn-PhI"/>
                 <outlet property="toolbar" destination="xuI-VK-Lau" id="G2T-kK-xhE"/>
-                <outletCollection property="gestureRecognizers" destination="jFN-ba-WP8" appends="YES" id="RLk-PJ-FC0"/>
             </connections>
         </view>
-        <tapGestureRecognizer id="jFN-ba-WP8" userLabel="Show Controls Tap Recognizer">
-            <connections>
-                <action selector="toggleControls:" destination="1" id="ctW-8q-Skq"/>
-                <outlet property="delegate" destination="1" id="mTI-jz-Kpw"/>
-            </connections>
-        </tapGestureRecognizer>
     </objects>
     <resources>
         <image name="info_popup" width="83" height="33"/>
