@@ -33,7 +33,7 @@
     [self.playButton setBackgroundImage:[UIImage imageNamed:@"play"] forState:UIControlStateNormal];
     [self.playButton addTarget:self action:@selector(clickPlayButton:) forControlEvents:UIControlEventTouchUpInside];
 
-    [self addSubview:self.playButton];
+//    [self addSubview:self.playButton];
     self.playButton.hidden = YES;
 }
 

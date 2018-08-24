@@ -32,7 +32,7 @@
         //将从AVPlayer输出的视频指向AVPlayerLayer实例
         [(AVPlayerLayer *)[self layer] setPlayer:player];
         
-        [[NSBundle mainBundle] loadNibNamed:@"YQOverlayView" owner:self options:nil];
+        self.overlayView = [[NSBundle mainBundle] loadNibNamed:@"YQOverlayView" owner:self options:nil].firstObject;
     
         [self addSubview:_overlayView];
     }
@@ -42,6 +42,7 @@
 - (void)layoutSubviews {
     [super layoutSubviews];
     self.overlayView.frame = self.bounds;
+
 }
 
 - (id<YQTransport>)transport {

@@ -11,12 +11,10 @@
 
 @interface YQOverlayView : UIView
 
-@property (weak, nonatomic) IBOutlet UIToolbar *toolbar;
 @property (weak, nonatomic) IBOutlet UIButton *togglePlaybackButton;
 @property (weak, nonatomic) IBOutlet UILabel *currentTimeLabel;
 @property (weak, nonatomic) IBOutlet UILabel *remainingTimeLabel;
 @property (weak, nonatomic) IBOutlet UISlider *scrubberSlider;
-
 
 @property (weak, nonatomic) id <YQTransportDelegate> delegate;
 
