@@ -12,7 +12,4 @@
 
 - (id)initWithURL:(NSURL *)assetURL;
 
-//@property (nonatomic, strong, readonly) UIView *view;
-
-
 @end

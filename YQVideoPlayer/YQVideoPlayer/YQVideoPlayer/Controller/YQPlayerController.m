@@ -86,13 +86,8 @@ static const NSString *PlayerItemStatusContext;
                 // Synchronize the timw display
                 [self.transport setCurrentTime:CMTimeGetSeconds(kCMTimeZero) duration:CMTimeGetSeconds(duration)];
                 
-                // Set the video title.
-//                [self.transport setTitle:self.asset.title];
-                
                 [self.player play];
                 
-//                [self loadMediaOptions];
-//                [self g];
             } else {
                 NSLog(@"Fail to load video");
             }

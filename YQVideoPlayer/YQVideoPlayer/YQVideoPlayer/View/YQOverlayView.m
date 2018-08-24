@@ -7,7 +7,6 @@
 //
 
 #import "YQOverlayView.h"
-#import "NSTimer+Extension.h"
 #import <MediaPlayer/MediaPlayer.h>
 
 @interface YQOverlayView ()
@@ -187,11 +186,11 @@
 - (void)resetTimer {
     [self.timer invalidate];
     if (!self.scrubbing) {
-        self.timer = [NSTimer scheduledTimerWithTimeInterval:5.0 firing:^{
-//            if (self.timer.isValid && !self.controlsHidden) {
-//                [self toggleControls:nil];
-//            }
-        }];
+//        self.timer = [NSTimer scheduledTimerWithTimeInterval:5.0 firing:^{
+////            if (self.timer.isValid && !self.controlsHidden) {
+////                [self toggleControls:nil];
+////            }
+//        }];
     }
 }
 
