@@ -74,7 +74,7 @@
                             </constraints>
                         </view>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YL4-gg-Tov">
-                            <rect key="frame" x="20" y="0.0" width="30" height="30"/>
+                            <rect key="frame" x="20" y="10" width="30" height="30"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="30" id="prd-TM-gxQ"/>
                                 <constraint firstAttribute="width" constant="30" id="ygA-fp-Bju"/>
@@ -91,7 +91,7 @@
                         <constraint firstAttribute="bottom" secondItem="TXT-tp-tjQ" secondAttribute="bottom" constant="10" id="CiT-Nj-kiC"/>
                         <constraint firstItem="TXT-tp-tjQ" firstAttribute="leading" secondItem="cqk-ij-Jdd" secondAttribute="leading" constant="20" id="PaE-CB-oq5"/>
                         <constraint firstItem="kr2-HO-P53" firstAttribute="centerX" secondItem="cqk-ij-Jdd" secondAttribute="centerX" id="T2n-15-DCF"/>
-                        <constraint firstItem="YL4-gg-Tov" firstAttribute="top" secondItem="cqk-ij-Jdd" secondAttribute="top" id="aUn-LT-Y2L"/>
+                        <constraint firstItem="YL4-gg-Tov" firstAttribute="top" secondItem="cqk-ij-Jdd" secondAttribute="top" constant="10" id="aUn-LT-Y2L"/>
                         <constraint firstAttribute="trailing" secondItem="TXT-tp-tjQ" secondAttribute="trailing" constant="20" id="euW-Um-FBO"/>
                         <constraint firstItem="kr2-HO-P53" firstAttribute="centerY" secondItem="cqk-ij-Jdd" secondAttribute="centerY" id="fIn-cw-1CJ"/>
                     </constraints>

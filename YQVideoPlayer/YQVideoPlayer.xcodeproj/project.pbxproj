@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		844B5BF2212FEA440009629A /* YQOverlayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 844B5BF1212FEA440009629A /* YQOverlayView.xib */; };
+		844B5BF4213004190009629A /* 222.mov in Resources */ = {isa = PBXBuildFile; fileRef = 844B5BF3213004190009629A /* 222.mov */; };
 		844F66B5212D151100A52322 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 844F66B4212D151100A52322 /* AppDelegate.m */; };
 		844F66B8212D151100A52322 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 844F66B7212D151100A52322 /* ViewController.m */; };
 		844F66BB212D151100A52322 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 844F66B9212D151100A52322 /* Main.storyboard */; };
@@ -19,7 +20,6 @@
 		844F66E8212D369000A52322 /* YQPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 844F66E7212D369000A52322 /* YQPlayerView.m */; };
 		844F66EF212D3A9700A52322 /* YQOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 844F66EE212D3A9700A52322 /* YQOverlayView.m */; };
 		844F6709212D4BB400A52322 /* YQPlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 844F6708212D4BB400A52322 /* YQPlayerController.m */; };
-		844F670E212D61C200A52322 /* hubblecast.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 844F670D212D61BA00A52322 /* hubblecast.m4v */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +41,7 @@
 
 /* Begin PBXFileReference section */
 		844B5BF1212FEA440009629A /* YQOverlayView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YQOverlayView.xib; sourceTree = "<group>"; };
+		844B5BF3213004190009629A /* 222.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = 222.mov; sourceTree = "<group>"; };
 		844F66B0212D151100A52322 /* YQVideoPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YQVideoPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		844F66B3212D151100A52322 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		844F66B4212D151100A52322 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -64,7 +65,6 @@
 		844F66EE212D3A9700A52322 /* YQOverlayView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YQOverlayView.m; sourceTree = "<group>"; };
 		844F6707212D4BB400A52322 /* YQPlayerController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YQPlayerController.h; sourceTree = "<group>"; };
 		844F6708212D4BB400A52322 /* YQPlayerController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YQPlayerController.m; sourceTree = "<group>"; };
-		844F670D212D61BA00A52322 /* hubblecast.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = hubblecast.m4v; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,7 +115,7 @@
 		844F66B2212D151100A52322 /* YQVideoPlayer */ = {
 			isa = PBXGroup;
 			children = (
-				844F670D212D61BA00A52322 /* hubblecast.m4v */,
+				844B5BF3213004190009629A /* 222.mov */,
 				844F66E5212D15F700A52322 /* YQVideoPlayer */,
 				844F66B3212D151100A52322 /* AppDelegate.h */,
 				844F66B4212D151100A52322 /* AppDelegate.m */,
@@ -293,8 +293,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				844F670E212D61C200A52322 /* hubblecast.m4v in Resources */,
 				844F66C0212D151100A52322 /* LaunchScreen.storyboard in Resources */,
+				844B5BF4213004190009629A /* 222.mov in Resources */,
 				844B5BF2212FEA440009629A /* YQOverlayView.xib in Resources */,
 				844F66BD212D151100A52322 /* Assets.xcassets in Resources */,
 				844F66BB212D151100A52322 /* Main.storyboard in Resources */,

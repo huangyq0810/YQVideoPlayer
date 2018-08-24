@@ -19,6 +19,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *remainingTimeLabel;
 @property (weak, nonatomic) IBOutlet UISlider *scrubberSlider;
 
+@property (nonatomic, strong) UIActivityIndicatorView *activityIndicatorView;
+
 @property (weak, nonatomic) id <YQTransportDelegate> delegate;
 
 - (IBAction)togglePlayback:(UIButton *)sender;

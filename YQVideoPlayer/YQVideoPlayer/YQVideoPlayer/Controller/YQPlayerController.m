@@ -51,7 +51,9 @@ static const NSString *PlayerItemStatusContext;
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-//    [self prepareToPlay];
+    // 设置在静音模式下可以播放音频声音
+    AVAudioSession *session = [AVAudioSession sharedInstance];
+    [session setCategory:AVAudioSessionCategoryPlayback error:nil];
 }
 
 - (void)prepareToPlay {
@@ -87,7 +89,7 @@ static const NSString *PlayerItemStatusContext;
                 [self.transport setCurrentTime:CMTimeGetSeconds(kCMTimeZero) duration:CMTimeGetSeconds(duration)];
                 
                 [self.player play];
-                
+                [self.transport start];
             } else {
                 NSLog(@"Fail to load video");
             }

@@ -26,12 +26,18 @@
     [self.scrubberSlider setThumbImage:thumbNormalImage forState:UIControlStateNormal];
     [self.scrubberSlider setThumbImage:thumbHighlightedImage forState:UIControlStateHighlighted];
     
-    // Set up actions
     [self.scrubberSlider addTarget:self action:@selector(showPopupUI) forControlEvents:UIControlEventValueChanged];
     
     self.showInfo = NO;
     self.togglePlaybackButton.selected = YES;
     [self setupInfoShow];
+    
+    // 指示器设置
+    self.activityIndicatorView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle: UIActivityIndicatorViewStyleWhiteLarge];
+    self.activityIndicatorView.center = self.center;//只能设置中心，不能设置大小
+    [self addSubview:self.activityIndicatorView];
+    self.activityIndicatorView.color = [UIColor whiteColor]; // 改变圈圈的颜色为红色
+    [self.activityIndicatorView startAnimating]; // 开始旋转
 }
 
 - (void)setCurrentTime:(NSTimeInterval)time duration:(NSTimeInterval)duration {
@@ -66,6 +72,10 @@
 - (void)playbackComplete {
     self.scrubberSlider.value = 0.0f;
     self.togglePlaybackButton.selected = NO;
+}
+
+- (void)start {
+    [self.activityIndicatorView stopAnimating];
 }
 
 - (void)showPopupUI {
