@@ -13,7 +13,6 @@
 
 @property (nonatomic) BOOL controlsHidden;
 @property (nonatomic) BOOL filmstripHidden;
-@property (strong, nonatomic) NSArray *excludedViews;
 //@property (nonatomic, assign) CGFloat sliderOffset;
 @property (nonatomic, assign) CGFloat infoViewOffset;
 @property (strong, nonatomic) NSTimer *timer;
@@ -32,7 +31,6 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     self.filmstripHidden = YES;
-    self.excludedViews = @[self.navigationBar, self.toolbar];
     
     UIImage *thumbNormalImage = [UIImage imageNamed:@"knob"];
     UIImage *thumbHighlightedImage = [UIImage imageNamed:@"knob_highlighted"];
@@ -186,11 +184,6 @@
 - (void)resetTimer {
     [self.timer invalidate];
     if (!self.scrubbing) {
-//        self.timer = [NSTimer scheduledTimerWithTimeInterval:5.0 firing:^{
-////            if (self.timer.isValid && !self.controlsHidden) {
-////                [self toggleControls:nil];
-////            }
-//        }];
     }
 }
 

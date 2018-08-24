@@ -11,7 +11,6 @@
 
 @interface YQOverlayView : UIView
 
-@property (weak, nonatomic) IBOutlet UINavigationBar *navigationBar;
 @property (weak, nonatomic) IBOutlet UIToolbar *toolbar;
 @property (weak, nonatomic) IBOutlet UIButton *togglePlaybackButton;
 @property (weak, nonatomic) IBOutlet UILabel *currentTimeLabel;

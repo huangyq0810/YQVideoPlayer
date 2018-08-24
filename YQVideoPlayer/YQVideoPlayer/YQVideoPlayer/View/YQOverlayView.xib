@@ -19,20 +19,6 @@
             <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <navigationBar contentMode="scaleToFill" id="rcP-zw-x92">
-                    <rect key="frame" x="0.0" y="0.0" width="568" height="44"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                    <items>
-                        <navigationItem id="Px5-np-mtj">
-                            <barButtonItem key="leftBarButtonItem" title="Done" style="done" id="mQY-bO-gs1">
-                                <color key="tintColor" red="0.20000000298023224" green="0.20000000298023224" blue="0.20000000298023224" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <connections>
-                                    <action selector="closeWindow:" destination="1" id="O8s-cy-wBu"/>
-                                </connections>
-                            </barButtonItem>
-                        </navigationItem>
-                    </items>
-                </navigationBar>
                 <toolbar clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="xuI-VK-Lau">
                     <rect key="frame" x="0.0" y="276" width="568" height="44"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
@@ -108,6 +94,15 @@
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 </view>
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="U5h-VV-e0A">
+                    <rect key="frame" x="12" y="28" width="27" height="27"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <state key="normal" backgroundImage="close"/>
+                    <connections>
+                        <action selector="closeWindow:" destination="1" eventType="touchUpInside" id="Im5-qR-PSe"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.14999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
             <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -116,7 +111,6 @@
             <connections>
                 <outlet property="currentTimeLabel" destination="pez-mE-XRl" id="A5p-vx-mHv"/>
                 <outlet property="infoView" destination="fw0-fG-1S8" id="oZ1-TW-AaL"/>
-                <outlet property="navigationBar" destination="rcP-zw-x92" id="Aja-tJ-3oB"/>
                 <outlet property="remainingTimeLabel" destination="N80-pE-ukV" id="hzl-7Q-PEl"/>
                 <outlet property="scrubberSlider" destination="bAP-oh-3et" id="Z0a-o4-48l"/>
                 <outlet property="scrubbingTimeLabel" destination="kmf-UC-16s" id="MtE-Vf-K4D"/>
@@ -126,6 +120,7 @@
         </view>
     </objects>
     <resources>
+        <image name="close" width="200" height="200"/>
         <image name="info_popup" width="83" height="33"/>
         <image name="pause_button" width="19" height="21"/>
         <image name="play_button" width="21" height="24"/>
