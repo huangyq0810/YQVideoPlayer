@@ -190,7 +190,6 @@ static const NSString *PlayerItemStatusContext;
 - (void)scrubbedToTime:(NSTimeInterval)time {
     // 避免出现操作堆积的情况
     [self.playerItem cancelPendingSeeks];
-//    [self.player seekToTime:CMTimeMakeWithSeconds(time, NSEC_PER_SEC)];
     [self.player seekToTime:CMTimeMakeWithSeconds(time, NSEC_PER_SEC) toleranceBefore:kCMTimeZero toleranceAfter:kCMTimeZero];
 }
 
