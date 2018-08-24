@@ -35,6 +35,9 @@ static const NSString *PlayerItemStatusContext;
 
 @property (strong, nonatomic) AVAssetImageGenerator *imageGenerator;
 
+@property (nonatomic, assign) BOOL scrubbing;
+
+
 @end
 
 @implementation YQPlayerController
@@ -185,7 +188,7 @@ static const NSString *PlayerItemStatusContext;
     [self.player pause];
     [self.player removeTimeObserver:self.timeObserver];
     self.timeObserver = nil;
-    
+    self.scrubbing = YES;
 }
 
 // 移动
@@ -201,6 +204,7 @@ static const NSString *PlayerItemStatusContext;
     if (self.lastPlaybackRate > 0.0f) {
         [self.player play];
     }
+    self.scrubbing = NO;
 }
 
 #pragma mark - 1
