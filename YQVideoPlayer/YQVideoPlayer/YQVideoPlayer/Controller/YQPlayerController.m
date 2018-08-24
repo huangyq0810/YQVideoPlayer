@@ -101,40 +101,6 @@ static const NSString *PlayerItemStatusContext;
     }
 }
 
-- (void)loadMediaOptions {
-    NSString *mc = AVMediaCharacteristicLegible;                            // 1
-    AVMediaSelectionGroup *group =
-    [self.asset mediaSelectionGroupForMediaCharacteristic:mc];          // 2
-    if (group) {
-        NSMutableArray *subtitles = [NSMutableArray array];                 // 3
-        for (AVMediaSelectionOption *option in group.options) {
-            [subtitles addObject:option.displayName];
-        }
-        [self.transport setSubtitles:subtitles];                            // 4
-    } else {
-        [self.transport setSubtitles:nil];
-    }
-}
-
-- (void)subtitleSelected:(NSString *)subtitle {
-    NSString *mc = AVMediaCharacteristicLegible;
-    AVMediaSelectionGroup *group =
-    [self.asset mediaSelectionGroupForMediaCharacteristic:mc];          // 1
-    BOOL selected = NO;
-    for (AVMediaSelectionOption *option in group.options) {
-        if ([option.displayName isEqualToString:subtitle]) {
-            [self.playerItem selectMediaOption:option                       // 2
-                         inMediaSelectionGroup:group];
-            selected = YES;
-        }
-    }
-    if (!selected) {
-        [self.playerItem selectMediaOption:nil                              // 3
-                     inMediaSelectionGroup:group];
-    }
-}
-
-
 #pragma mark - Time Observers
 
 // 定期监听 (还有一种是边界时间监听)
@@ -230,7 +196,8 @@ static const NSString *PlayerItemStatusContext;
 - (void)scrubbedToTime:(NSTimeInterval)time {
     // 避免出现操作堆积的情况
     [self.playerItem cancelPendingSeeks];
-    [self.player seekToTime:CMTimeMakeWithSeconds(time, NSEC_PER_SEC)];
+//    [self.player seekToTime:CMTimeMakeWithSeconds(time, NSEC_PER_SEC)];
+    [self.player seekToTime:CMTimeMakeWithSeconds(time, NSEC_PER_SEC) toleranceBefore:kCMTimeZero toleranceAfter:kCMTimeZero];
 }
 
 // 结束
