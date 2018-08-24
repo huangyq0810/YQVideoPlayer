@@ -9,9 +9,10 @@
 #import "YQOverlayView.h"
 #import <MediaPlayer/MediaPlayer.h>
 
-@interface YQOverlayView ()
+@interface YQOverlayView()
 
-@property (strong, nonatomic) UIButton *playButton;
+// 是否显示进度条等
+@property (nonatomic, assign) BOOL showInfo;
 
 @end
 
@@ -28,18 +29,9 @@
     // Set up actions
     [self.scrubberSlider addTarget:self action:@selector(showPopupUI) forControlEvents:UIControlEventValueChanged];
     
-    // Set up playButton
-    self.playButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 50,50)];
-    [self.playButton setBackgroundImage:[UIImage imageNamed:@"play"] forState:UIControlStateNormal];
-    [self.playButton addTarget:self action:@selector(clickPlayButton:) forControlEvents:UIControlEventTouchUpInside];
-
-//    [self addSubview:self.playButton];
-    self.playButton.hidden = YES;
-}
-
-- (void)layoutSubviews {
-    [super layoutSubviews];
-    self.playButton.center = self.center;
+    self.showInfo = NO;
+    self.togglePlaybackButton.selected = YES;
+    [self setupInfoShow];
 }
 
 - (void)setCurrentTime:(NSTimeInterval)time duration:(NSTimeInterval)duration {
@@ -67,14 +59,6 @@
     return [NSString stringWithFormat:@"%02ld:%02ld", (long) minutes, (long) seconds];
 }
 
-- (void)showPopupUI {
-    self.currentTimeLabel.text = @"-- : --";
-    self.remainingTimeLabel.text = @"-- : --";
-    
-    [self setScrubbingTime:self.scrubberSlider.value];
-    [self.delegate scrubbedToTime:self.scrubberSlider.value];
-}
-
 - (void)setCurrentTime:(NSTimeInterval)currentTime {
     [self.delegate jumpedToTime:currentTime];
 }
@@ -84,24 +68,25 @@
     self.togglePlaybackButton.selected = NO;
 }
 
-#pragma mark - 事件响应
-
-- (void)clickPlayButton:(UIButton *)sender {
-    sender.selected = !sender.selected;
-    sender.hidden = sender.selected;
-    if (self.delegate) {
-        if (sender.selected) {
-            [self.delegate performSelector:@selector(play)];
-        } else {
-            [self.delegate performSelector:@selector(pause)];
-        }
-    }
-    self.togglePlaybackButton.selected = sender.selected;
+- (void)showPopupUI {
+    self.currentTimeLabel.text = @"-- : --";
+    self.remainingTimeLabel.text = @"-- : --";
+    
+    [self setScrubbingTime:self.scrubberSlider.value];
+    [self.delegate scrubbedToTime:self.scrubberSlider.value];
 }
+
+// 设置是否显示进度条等
+- (void)setupInfoShow {
+    self.holderView.hidden = !self.showInfo;
+    self.togglePlaybackButton.hidden = !self.showInfo;
+    self.dismissButton.hidden = !self.showInfo;
+}
+
+#pragma mark - 事件响应
 
 - (IBAction)togglePlayback:(UIButton *)sender {
     sender.selected = !sender.selected;
-    self.playButton.hidden = sender.selected;
     if (self.delegate) {
         if (sender.selected) {
             [self.delegate performSelector:@selector(play)];
@@ -109,7 +94,6 @@
             [self.delegate performSelector:@selector(pause)];
         }
     }
-    self.playButton.selected = sender.selected;
 }
 
 - (IBAction)closeWindow:(id)sender {
@@ -118,8 +102,8 @@
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    NSLog(@"-----touch-----");
-
+    self.showInfo = !self.showInfo;
+    [self setupInfoShow];
 }
 
 @end

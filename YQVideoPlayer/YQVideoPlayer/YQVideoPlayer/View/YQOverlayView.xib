@@ -19,21 +19,21 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cqk-ij-Jdd">
                     <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                     <subviews>
-                        <button opaque="NO" alpha="0.29999999999999999" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kr2-HO-P53">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kr2-HO-P53">
                             <rect key="frame" x="157.5" y="293.5" width="60" height="60"/>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="60" id="agr-9L-ZiJ"/>
                                 <constraint firstAttribute="height" constant="60" id="ziw-zz-bZg"/>
                             </constraints>
-                            <state key="normal" image="play_button"/>
-                            <state key="selected" image="pause_button"/>
+                            <state key="normal" image="play"/>
+                            <state key="selected" image="pause"/>
                             <connections>
                                 <action selector="togglePlayback:" destination="iN0-l3-epB" eventType="touchUpInside" id="GKv-tX-vMB"/>
                             </connections>
                         </button>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TXT-tp-tjQ">
-                            <rect key="frame" x="20" y="607" width="335" height="20"/>
+                            <rect key="frame" x="20" y="617" width="335" height="20"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20:30" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XD6-BT-ryH">
                                     <rect key="frame" x="0.0" y="0.0" width="42" height="20"/>
@@ -74,7 +74,7 @@
                             </constraints>
                         </view>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YL4-gg-Tov">
-                            <rect key="frame" x="20" y="20" width="30" height="30"/>
+                            <rect key="frame" x="20" y="0.0" width="30" height="30"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="30" id="prd-TM-gxQ"/>
                                 <constraint firstAttribute="width" constant="30" id="ygA-fp-Bju"/>
@@ -88,10 +88,10 @@
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstItem="YL4-gg-Tov" firstAttribute="leading" secondItem="cqk-ij-Jdd" secondAttribute="leading" constant="20" id="4ld-Qw-N9f"/>
-                        <constraint firstAttribute="bottom" secondItem="TXT-tp-tjQ" secondAttribute="bottom" constant="20" id="CiT-Nj-kiC"/>
+                        <constraint firstAttribute="bottom" secondItem="TXT-tp-tjQ" secondAttribute="bottom" constant="10" id="CiT-Nj-kiC"/>
                         <constraint firstItem="TXT-tp-tjQ" firstAttribute="leading" secondItem="cqk-ij-Jdd" secondAttribute="leading" constant="20" id="PaE-CB-oq5"/>
                         <constraint firstItem="kr2-HO-P53" firstAttribute="centerX" secondItem="cqk-ij-Jdd" secondAttribute="centerX" id="T2n-15-DCF"/>
-                        <constraint firstItem="YL4-gg-Tov" firstAttribute="top" secondItem="cqk-ij-Jdd" secondAttribute="top" constant="20" id="aUn-LT-Y2L"/>
+                        <constraint firstItem="YL4-gg-Tov" firstAttribute="top" secondItem="cqk-ij-Jdd" secondAttribute="top" id="aUn-LT-Y2L"/>
                         <constraint firstAttribute="trailing" secondItem="TXT-tp-tjQ" secondAttribute="trailing" constant="20" id="euW-Um-FBO"/>
                         <constraint firstItem="kr2-HO-P53" firstAttribute="centerY" secondItem="cqk-ij-Jdd" secondAttribute="centerY" id="fIn-cw-1CJ"/>
                     </constraints>
@@ -107,6 +107,8 @@
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
                 <outlet property="currentTimeLabel" destination="XD6-BT-ryH" id="jcG-yE-wDW"/>
+                <outlet property="dismissButton" destination="YL4-gg-Tov" id="teN-dy-QON"/>
+                <outlet property="holderView" destination="cqk-ij-Jdd" id="ANn-t3-0NH"/>
                 <outlet property="remainingTimeLabel" destination="HYw-ph-xZl" id="IWV-9h-i4e"/>
                 <outlet property="scrubberSlider" destination="TUv-8c-Wtt" id="ErQ-BM-Ry5"/>
                 <outlet property="togglePlaybackButton" destination="kr2-HO-P53" id="K2E-bY-KNK"/>
@@ -116,7 +118,7 @@
     </objects>
     <resources>
         <image name="close" width="200" height="200"/>
-        <image name="pause_button" width="19" height="21"/>
-        <image name="play_button" width="21" height="24"/>
+        <image name="pause" width="200" height="200"/>
+        <image name="play" width="200" height="200"/>
     </resources>
 </document>
