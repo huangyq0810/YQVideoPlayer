@@ -46,8 +46,8 @@
     
     // Set up actions
     [self.scrubberSlider addTarget:self action:@selector(showPopupUI) forControlEvents:UIControlEventValueChanged];
-    [self.scrubberSlider addTarget:self action:@selector(hidePopupUI) forControlEvents:UIControlEventTouchUpInside];
-    [self.scrubberSlider addTarget:self action:@selector(unhidePopupUI) forControlEvents:UIControlEventTouchDown];
+//    [self.scrubberSlider addTarget:self action:@selector(hidePopupUI) forControlEvents:UIControlEventTouchUpInside];
+//    [self.scrubberSlider addTarget:self action:@selector(unhidePopupUI) forControlEvents:UIControlEventTouchDown];
     
     [self resetTimer];
     
@@ -66,8 +66,6 @@
     sender.selected = !sender.selected;
     sender.hidden = sender.selected;
     if (self.delegate) {
-//        SEL callback = sender.selected ? @selector(play) : @selector(pause);
-//        [self.delegate performSelector:callback];
         if (sender.selected) {
             [self.delegate performSelector:@selector(play)];
         } else {
@@ -122,8 +120,6 @@
     sender.selected = !sender.selected;
     self.playButton.hidden = sender.selected;
     if (self.delegate) {
-//        SEL callback = sender.selected ? @selector(play) : @selector(pause);
-//        [self.delegate performSelector:callback];
         if (sender.selected) {
             [self.delegate performSelector:@selector(play)];
         } else {
@@ -177,11 +173,6 @@
     }];
     self.scrubbing = NO;
     [self.delegate scrubbingDidEnd];
-}
-
-- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch {
-    [self resetTimer];
-    return ![self.excludedViews containsObject:touch.view] && ![self.excludedViews containsObject:touch.view.superview];
 }
 
 - (void)setCurrentTime:(NSTimeInterval)currentTime {

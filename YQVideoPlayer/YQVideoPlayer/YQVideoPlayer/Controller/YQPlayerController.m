@@ -10,7 +10,6 @@
 #import <AVFoundation/AVFoundation.h>
 #import "YQTransport.h"
 #import "YQPlayerView.h"
-#import "AVAsset+Extension.h"
 
 // AVPlayerItem's status property
 #define STATUS_KEYPATH @"status"

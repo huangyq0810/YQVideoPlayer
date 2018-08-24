@@ -20,7 +20,6 @@
 		844F66F1212D3D0B00A52322 /* YQOverlayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 844F66F0212D3D0B00A52322 /* YQOverlayView.xib */; };
 		844F6706212D433600A52322 /* NSTimer+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 844F6705212D433600A52322 /* NSTimer+Extension.m */; };
 		844F6709212D4BB400A52322 /* YQPlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 844F6708212D4BB400A52322 /* YQPlayerController.m */; };
-		844F670C212D516E00A52322 /* AVAsset+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 844F670B212D516E00A52322 /* AVAsset+Extension.m */; };
 		844F670E212D61C200A52322 /* hubblecast.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 844F670D212D61BA00A52322 /* hubblecast.m4v */; };
 /* End PBXBuildFile section */
 
@@ -68,8 +67,6 @@
 		844F6705212D433600A52322 /* NSTimer+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+Extension.m"; sourceTree = "<group>"; };
 		844F6707212D4BB400A52322 /* YQPlayerController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YQPlayerController.h; sourceTree = "<group>"; };
 		844F6708212D4BB400A52322 /* YQPlayerController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YQPlayerController.m; sourceTree = "<group>"; };
-		844F670A212D516E00A52322 /* AVAsset+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AVAsset+Extension.h"; sourceTree = "<group>"; };
-		844F670B212D516E00A52322 /* AVAsset+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AVAsset+Extension.m"; sourceTree = "<group>"; };
 		844F670D212D61BA00A52322 /* hubblecast.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = hubblecast.m4v; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -199,8 +196,6 @@
 			children = (
 				844F6704212D433600A52322 /* NSTimer+Extension.h */,
 				844F6705212D433600A52322 /* NSTimer+Extension.m */,
-				844F670A212D516E00A52322 /* AVAsset+Extension.h */,
-				844F670B212D516E00A52322 /* AVAsset+Extension.m */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -345,7 +340,6 @@
 				844F66B8212D151100A52322 /* ViewController.m in Sources */,
 				844F66C3212D151100A52322 /* main.m in Sources */,
 				844F66EF212D3A9700A52322 /* YQOverlayView.m in Sources */,
-				844F670C212D516E00A52322 /* AVAsset+Extension.m in Sources */,
 				844F66B5212D151100A52322 /* AppDelegate.m in Sources */,
 				844F66E8212D369000A52322 /* YQPlayerView.m in Sources */,
 			);
