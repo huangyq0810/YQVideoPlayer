@@ -216,20 +216,30 @@ static const NSString *PlayerItemStatusContext;
 
 #pragma mark - 2.交互
 
-- (void)scrubbedToTime:(NSTimeInterval)time {
-    
-}
-
-- (void)scrubbingDidEnd {
-    
-}
-
+// 开始
 - (void)scrubbingDidStart {
+    // 获取当前播放率并暂停播放
+    self.lastPlaybackRate = self.player.rate;
+    [self.player pause];
+    [self.player removeTimeObserver:self.timeObserver];
+    self.timeObserver = nil;
     
 }
 
+// 移动
+- (void)scrubbedToTime:(NSTimeInterval)time {
+    // 避免出现操作堆积的情况
+    [self.playerItem cancelPendingSeeks];
+    [self.player seekToTime:CMTimeMakeWithSeconds(time, NSEC_PER_SEC)];
+}
 
-
+// 结束
+- (void)scrubbingDidEnd {
+    [self addPlayerItemTimeObserver];
+    if (self.lastPlaybackRate > 0.0f) {
+        [self.player play];
+    }
+}
 
 #pragma mark - 1
 
